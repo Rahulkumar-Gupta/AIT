@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canvas</title>
+    <style>
+        body{
+		    padding-left: 1%;
+			padding-right: 1%;
+            padding-top: 1%;
+				background-color: rgb(130, 46, 46);
+			}
+        </style>
+</head>
+    <body><font color="white"><h2>
+        <p> Image to Use:</p>
+        <img id="scream" src="https://raw.github.com/Rahulkumar-Gupta/AIT/main/parrot.jpg" alt="The Scream" width="220" height="277">
+        <p>Canvas to fill</p>
+        <canvas id="myCanvas" width="330" height="200" style="border: 1px solid #d3d3d3;">
+            Your browser does not support the HTML canvas tag.</canvas>
+            <p><button onclick="myCanvas()">Try it</button></p>
+            <script>
+                function myCanvas()
+                {
+                    var c= document.getElementById("myCanvas");
+                    var ctx=c.getContext("2d");
+                    var img=document.getElementById("scream");
+                    ctx.drawImage(img,2,2);
+
+                }
+                </script>
+               </h2> </font>
+    </body>
+    </html>
